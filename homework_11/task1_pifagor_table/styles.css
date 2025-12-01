@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+td,
+th {
+    border: 1px solid #aaa;
+    height: 26px;
+    width: 34px;
+    text-align: center;
+}
+
+th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
