@@ -3,7 +3,7 @@ function Student(firstName, lastName, birthYear, grades) {
     this.lastName = lastName;
     this.birthYear = birthYear;
     this.grades = grades;
-    const presence = new Array(25);
+    const presence = new Array(25).fill(null);
 
     this.getAge = function() {
         return new Date().getFullYear() - this.birthYear;
@@ -18,14 +18,14 @@ function Student(firstName, lastName, birthYear, grades) {
     }
 
     this.present = function () {
-        const i = presence.indexOf(undefined);
+        const i = presence.indexOf(null);
         if (i != -1) {
             presence[i] = true;
         }
     }
 
     this.absent = function () {
-        const i = presence.indexOf(undefined);
+        const i = presence.indexOf(null);
         if (i != -1) {
             presence[i] = false;
         }
@@ -37,8 +37,8 @@ function Student(firstName, lastName, birthYear, grades) {
         let total = 0;
         let attended = 0;
 
-        for (value of presence) {
-            if (value !== undefined) {
+        for (let value of presence) {
+            if (value !== null) {
                 total++;
                 if (value === true) {
                     attended++;
@@ -64,7 +64,7 @@ const student1 = new Student("Alex", "Goring", 2007, [100, 90, 89]);
 student1.present();
 student1.present();
 student1.present();
-student1.absent();
+student1.present();
 
 console.log(student1.summary());
 
