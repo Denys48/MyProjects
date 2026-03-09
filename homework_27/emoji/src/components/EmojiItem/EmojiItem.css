@@ -1,0 +1,20 @@
+.emoji-symbol {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emoji-symbol:hover {
+  transform: scale(1.2);
+}
+
+.emoji-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.emoji-item:first-child{
+    margin-left: 0;
+}
