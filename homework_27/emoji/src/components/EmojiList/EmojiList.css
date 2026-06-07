@@ -1,0 +1,4 @@
+.emoji-list{
+    display: flex;
+    flex-direction: row;
+}
